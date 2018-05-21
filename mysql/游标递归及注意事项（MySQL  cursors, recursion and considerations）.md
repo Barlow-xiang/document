@@ -20,11 +20,11 @@ CREATE TABLE `temp_tree` (
     PRIMARY KEY (`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '最顶层和最底层节点的关系临时表';
 ```
-3.创建copytreeToTempTree存储过程，并递归找子节点。
-(1)查询出所有root节点。
-(2)设置递归深度(这里设置了10)。
-(3)用游标循环调用findChildren()。
-(4)递归完后关闭游标，结束。
+3.创建copytreeToTempTree存储过程，并递归找子节点。  
+(1)查询出所有root节点。  
+(2)设置递归深度(这里设置了10)。  
+(3)用游标循环调用findChildren()。  
+(4)递归完后关闭游标，结束。  
 ``` sql
 DROP PROCEDURE if EXISTS `copytreeToTempTree`;
 DELIMITER ;;
