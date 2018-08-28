@@ -78,6 +78,6 @@ call copytreeToTempTree();
 二.注意事项
 -------
 1.findChildren声明接收type的为什么是type1。  
-  `因为游标里面是type，再用type接收不到值，一直是null.(暂不知实现原理，没找到相关原因)`  
+  `因为游标里面是type，再用type接收不到值，一直是null.(暂不知实现原理)`  
 2.报这个错”Thread stack overrun:  11552 bytes used of a 131072 byte stack, and 128000 bytes needed.  Use 'mysqld --thread_stack=#' to specify a bigger stack.“  
   `有可能是递归没跳出去，导致死循环。` 
